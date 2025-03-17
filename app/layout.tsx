@@ -6,6 +6,12 @@ import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
+export const metadata = {
+  generator: 'v0.dev',
+  title: 'RP Piscinas | Piscinas com Deck de Madeira em Todo o Brasil',
+  description: 'Instalação rápida e personalizada de piscinas com deck de madeira em todo o Brasil. Solicite seu orçamento agora e transforme seu espaço com elegância e conforto!'
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,7 +30,6 @@ export default function RootLayout({
           content="piscina, piscina com deck, deck de madeira para piscinas, instalação de piscinas, piscinas sob medida, piscinas em todo Brasil"
         />
         <link rel="icon" href="/rp.gif" />
-        <title>RP Piscinas | Piscinas com Deck de Madeira em Todo o Brasil</title>
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -108,11 +113,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'
-
-export const metadata = {
-      generator: 'v0.dev'
-    };
