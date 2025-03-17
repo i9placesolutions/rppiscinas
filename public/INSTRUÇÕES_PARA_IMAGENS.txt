@@ -1,0 +1,20 @@
+INSTRUÇÕES PARA SUBSTITUIR IMAGENS
+
+Para exibir corretamente as imagens das piscinas na sua landing page, siga os passos abaixo:
+
+1. Renomeie as três imagens de piscinas enviadas para:
+   - piscina1.jpg (a imagem da piscina com parede azul e vaso decorativo)
+   - piscina2.jpg (a imagem da piscina com cascata na parede)
+   - piscina3.jpg (a imagem da piscina externa com céu aberto)
+
+2. Substitua os arquivos placeholder atuais na pasta "public" pelos seus arquivos renomeados.
+
+3. Reinicie o servidor Next.js com o comando:
+   npm run dev
+
+As imagens deverão aparecer corretamente na montagem estilizada.
+
+Nota: Se ainda houver problemas, verifique se:
+- Os nomes dos arquivos estão exatamente como listados acima
+- Os arquivos estão no formato JPG
+- Os arquivos foram colocados diretamente na pasta "public" 
