@@ -56,9 +56,6 @@ export default function RootLayout({
         {/* Preload de recursos críticos */}
         <link rel="preload" href="/piscina1.jpg" as="image" />
         <link rel="preload" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ativo%202-9k7xdDvyE7oktzUM2FxB6Bytg92aEm.png" as="image" />
-        
-        {/* Folha de estilo para animações */}
-        <link rel="stylesheet" href="/animations.css" />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
