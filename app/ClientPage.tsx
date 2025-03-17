@@ -224,24 +224,14 @@ export default function ClientPage() {
       {/* Floating WhatsApp Button */}
       <Link
         href="https://api.whatsapp.com/send/?phone=5564992259747&text&type=phone_number&app_absent=0"
-<<<<<<< HEAD
         className="fixed bottom-10 right-8 z-[9999] flex h-[60px] w-[60px] items-center justify-center rounded-full bg-green-500 text-white shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-105 group animate-pulse-slow"
         style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.4)' }}
-=======
-        className="fixed bottom-10 right-8 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl hover:bg-green-600 transition-all duration-300"
-        style={{ boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)' }}
->>>>>>> 4afdb30e2b52cbfb63c93a4cba8e3046a321f62a
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar via WhatsApp"
       >
-<<<<<<< HEAD
         <span className="absolute -inset-2 bg-green-500 rounded-full opacity-20 animate-ping-slow group-hover:opacity-40"></span>
         <MessageCircle className="h-7 w-7" strokeWidth={2.5} />
-=======
-        <div className="absolute -inset-4 bg-green-500 rounded-full opacity-20 animate-ping"></div>
-        <MessageCircle className="h-8 w-8" strokeWidth={2.5} />
->>>>>>> 4afdb30e2b52cbfb63c93a4cba8e3046a321f62a
       </Link>
 
       {/* Header */}
