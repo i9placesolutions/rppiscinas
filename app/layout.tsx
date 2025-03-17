@@ -3,14 +3,22 @@ import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
+import type { Metadata } from "next"
+import "./animations.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
+export const metadata: Metadata = {
   generator: 'v0.dev',
   title: 'RP Piscinas | Piscinas com Deck de Madeira em Todo o Brasil',
-  description: 'Instalação rápida e personalizada de piscinas com deck de madeira em todo o Brasil. Solicite seu orçamento agora e transforme seu espaço com elegância e conforto!'
-};
+  description: 'Instalação rápida e personalizada de piscinas com deck de madeira em todo o Brasil. Solicite seu orçamento agora e transforme seu espaço com elegância e conforto!',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+}
 
 export default function RootLayout({
   children,
@@ -18,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
@@ -52,7 +60,7 @@ export default function RootLayout({
         {/* Folha de estilo para animações */}
         <link rel="stylesheet" href="/animations.css" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

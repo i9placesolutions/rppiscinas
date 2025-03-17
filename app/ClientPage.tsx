@@ -238,141 +238,70 @@ export default function ClientPage() {
       <header className={`sticky top-0 left-0 right-0 z-30 bg-gradient-to-r from-[#01294C] to-[#01294C]/90 text-white transition-all duration-300 ${scrolled ? 'py-2 shadow-lg' : 'py-4 md:py-6'}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Link href="/">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ativo%202-9k7xdDvyE7oktzUM2FxB6Bytg92aEm.png"
-                    alt="RP Piscinas - Especialista em piscinas com deck de madeira"
-                    width={180}
-                    height={70}
-                    className={`h-auto w-auto transition-all duration-300 ${scrolled ? 'max-w-[140px]' : 'max-w-[180px]'}`}
-                    priority
-                  />
-                </Link>
-              </motion.div>
-            </div>
-            
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/logo.png"
+                alt="RP Piscinas Logo"
+                width={40}
+                height={40}
+                className="w-8 h-8 sm:w-10 sm:h-10"
+              />
+              <span className="text-lg sm:text-xl font-bold">RP Piscinas</span>
+            </Link>
+
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex items-center space-x-8">
               {navLinks.map((link, index) => (
                 <Link 
-                  key={index} 
-                  href={link.href} 
-                  className="relative font-medium hover:text-white/80 transition-colors after:absolute after:left-0 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all hover:after:w-full"
+                  key={index}
+                  href={link.href}
+                  className="text-white/90 hover:text-white transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
               <Button
                 size="sm"
-                className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium ml-2"
+                className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium"
                 asChild
               >
-                <Link href="#contato">Orçamento</Link>
+                <Link href="#contato">Solicitar orçamento</Link>
               </Button>
             </nav>
 
             {/* Mobile Menu Button */}
-            <button 
-              className="flex md:hidden p-2 focus:outline-none"
+            <button
+              className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
               onClick={toggleMobileMenu}
-              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              aria-label="Menu"
             >
-              <Menu className="h-6 w-6 text-white" />
+              <Menu className="h-6 w-6" />
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden bg-[#01294C]"
-            >
-              <div className="px-4 py-4 space-y-3 flex flex-col">
-                {navLinks.map((link, index) => (
-                  <Link 
-                    key={index}
-                    href={link.href}
-                    className="py-2 px-4 hover:bg-[#023e73]/30 rounded-md transition-colors text-white/90 hover:text-white"
-                    onClick={closeMobileMenu}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="pt-2">
-                  <Button
-                    size="sm"
-                    className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium w-full whitespace-normal"
-                    asChild
-                    onClick={closeMobileMenu}
-                  >
-                    <Link href="#contato">Solicitar orçamento</Link>
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Background with pattern overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#01294C] to-[#034c91] overflow-hidden">
-          <div className="absolute inset-0 opacity-10" style={{ 
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.15"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-           }}></div>
-        </div>
-        
-        {/* Water-like wave effect at bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
-            <path fill="#ffffff" fillOpacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,218.7C672,235,768,245,864,234.7C960,224,1056,192,1152,176C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-        </div>
-
-        <div className="container mx-auto px-4 pt-32 pb-48 md:pt-36 md:pb-56 relative z-10">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#01294C] to-[#01294C]/90 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent drop-shadow-sm"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight"
             >
-              Piscina com deck sob medida para você
+              Transforme seu espaço com uma piscina com deck de madeira
             </motion.h1>
-            
-            <motion.div
-              className="mt-8 relative"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
             >
-              <div className="absolute -top-4 -right-4 md:right-20 lg:right-32 w-20 h-20 text-amber-300">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="rotate-12">
-                  <path fill="currentColor" d="M31.7,-52.1C39.3,-43,42.6,-30.1,49.7,-17.2C56.8,-4.4,67.9,8.4,68.9,21.5C69.9,34.6,60.8,48,48.1,54.6C35.4,61.2,19.1,61.1,4.6,57.5C-9.8,54,-22.4,47,-34.3,39.3C-46.2,31.6,-57.5,23.1,-62.5,11C-67.6,-1.1,-66.5,-16.9,-59.7,-29.1C-52.9,-41.3,-40.6,-49.9,-28.1,-56.6C-15.7,-63.3,-3.1,-68.1,7.7,-64.8C18.5,-61.6,24.1,-61.3,31.7,-52.1Z" transform="translate(100 100)" />
-                </svg>
-              </div>
-              
-            <motion.p
-                className="text-2xl md:text-3xl text-white/90 mt-6 font-light relative z-10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-              >
-                Seu espaço com <span className="font-semibold text-amber-300">elegância</span> e <span className="font-semibold text-amber-300">conforto</span>! ✨🏊‍♂️
+              Instalação rápida, personalizada e com garantia. Solicite seu orçamento agora e tenha a piscina dos seus sonhos em poucos dias!
             </motion.p>
-            </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -395,29 +324,44 @@ export default function ClientPage() {
                 </Button>
               </div>
             </motion.div>
-            
-            <motion.div 
-              className="mt-16 flex justify-center gap-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
-              <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="h-5 w-5 text-amber-300 mr-2" />
-                <span className="text-white/90 text-sm">Garantia 3 meses</span>
-          </div>
-              <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="h-5 w-5 text-amber-300 mr-2" />
-                <span className="text-white/90 text-sm">Instalação rápida</span>
-        </div>
-              <div className="hidden md:flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="h-5 w-5 text-amber-300 mr-2" />
-                <span className="text-white/90 text-sm">Entregamos em todo Brasil</span>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
+
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden overflow-hidden bg-[#01294C]"
+          >
+            <div className="px-4 py-4 space-y-3 flex flex-col">
+              {navLinks.map((link, index) => (
+                <Link 
+                  key={index}
+                  href={link.href}
+                  className="py-2 px-4 hover:bg-[#023e73]/30 rounded-md transition-colors text-white/90 hover:text-white"
+                  onClick={closeMobileMenu}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="pt-2">
+                <Button
+                  size="sm"
+                  className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium w-full whitespace-normal"
+                  asChild
+                  onClick={closeMobileMenu}
+                >
+                  <Link href="#contato">Solicitar orçamento</Link>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main>
         {/* Designs exclusivos para seu espaço */}
