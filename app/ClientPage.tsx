@@ -240,7 +240,7 @@ export default function ClientPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/logo.png"
+                src="/rp.gif"
                 alt="RP Piscinas Logo"
                 width={40}
                 height={40}
@@ -282,48 +282,49 @@ export default function ClientPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#01294C] to-[#01294C]/90 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-20"></div>
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight"
-            >
-              Transforme seu espaço com uma piscina com deck de madeira
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
-            >
-              Instalação rápida, personalizada e com garantia. Solicite seu orçamento agora e tenha a piscina dos seus sonhos em poucos dias!
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="mt-12 relative"
-            >
-              <div className="relative inline-block group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full blur-md opacity-70 group-hover:opacity-100 transition duration-200"></div>
-                <Button
-                  size="lg"
-                  className="relative bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[#01294C] font-bold px-4 sm:px-10 py-5 sm:py-7 text-base sm:text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 whitespace-normal sm:whitespace-nowrap"
-                  asChild
-                >
-                  <Link href="#contato" className="flex items-center justify-center gap-2">
+      <section className="relative bg-[#01294C] text-white py-16 md:py-24 overflow-hidden">
+        {/* Ondas decorativas */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
+            <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in">
+              Transforme seu Espaço com Piscinas e Decks de Madeira
+            </h1>
+            <p className="text-lg md:text-xl mb-8 text-gray-200 animate-slide-up delay-200">
+              Instalação rápida e personalizada em todo o Brasil. Garantia de 3 meses e atendimento profissional.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-300">
+              <Button
+                asChild
+                className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-normal text-center min-w-[200px]"
+              >
+                <Link href="https://api.whatsapp.com/send/?phone=5564992259747&text&type=phone_number&app_absent=0" target="_blank">
+                  <span className="flex items-center gap-2">
                     Solicite seu orçamento agora
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                </Button>
+                    <ArrowRightIcon className="w-5 h-5" />
+                  </span>
+                </Link>
+              </Button>
+            </div>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center animate-slide-up delay-400">
+              <div className="flex flex-col items-center">
+                <CheckCircle className="w-8 h-8 text-amber-500 mb-2" />
+                <p className="font-medium">Garantia de 3 meses</p>
               </div>
-            </motion.div>
+              <div className="flex flex-col items-center">
+                <CheckCircle className="w-8 h-8 text-amber-500 mb-2" />
+                <p className="font-medium">Atendimento em todo Brasil</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <CheckCircle className="w-8 h-8 text-amber-500 mb-2" />
+                <p className="font-medium">Instalação rápida</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -734,7 +735,7 @@ export default function ClientPage() {
                               <ArrowRightIcon className="h-4 w-4" />
                             </Link>
                           </Button>
-                  </div>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -1174,7 +1175,7 @@ export default function ClientPage() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-sm md:text-base">
-                <p>Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda com nossa <a href="#" onClick={openPrivacyPolicy} className="underline text-amber-400 hover:text-amber-300">Política de Privacidade</a>.</p>
+                <p>Utilizamos cookies para melhorar sua experiência em nosso site. Ao continuar navegando, você concorda em receber comunicações sobre seu orçamento. <a href="#" onClick={openPrivacyPolicy} className="underline text-amber-400 hover:text-amber-300">Política de Privacidade</a>.</p>
               </div>
               <div className="flex-shrink-0">
                 <Button 
