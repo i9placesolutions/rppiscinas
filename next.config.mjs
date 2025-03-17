@@ -15,7 +15,11 @@ const nextConfig = {
   },
   images: {
     unoptimized: false,
+<<<<<<< HEAD
     formats: ['image/webp', 'image/avif'],
+=======
+    formats: ['image/webp'],
+>>>>>>> 4afdb30e2b52cbfb63c93a4cba8e3046a321f62a
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
@@ -26,12 +30,15 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   swcMinify: true,
+<<<<<<< HEAD
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
     optimizeCss: true,
   },
+=======
+>>>>>>> 4afdb30e2b52cbfb63c93a4cba8e3046a321f62a
   async headers() {
     return [
       {
