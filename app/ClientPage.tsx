@@ -240,7 +240,7 @@ export default function ClientPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/rp.gif"
+                src="/logo.avif"
                 alt="RP Piscinas Logo"
                 width={40}
                 height={40}
@@ -311,7 +311,7 @@ export default function ClientPage() {
                 </Link>
               </Button>
             </div>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center animate-slide-up delay-400">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center animate-slide-up delay-400 relative z-20">
               <div className="flex flex-col items-center">
                 <CheckCircle className="w-8 h-8 text-amber-500 mb-2" />
                 <p className="font-medium">Garantia de 3 meses</p>
