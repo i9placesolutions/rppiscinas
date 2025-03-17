@@ -311,7 +311,7 @@ export default function ClientPage() {
                 <div className="pt-2">
                   <Button
                     size="sm"
-                    className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium w-full"
+                    className="bg-amber-500 hover:bg-amber-600 text-[#01294C] font-medium w-full whitespace-normal"
                     asChild
                     onClick={closeMobileMenu}
                   >
@@ -381,18 +381,18 @@ export default function ClientPage() {
             >
               <div className="relative inline-block group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full blur-md opacity-70 group-hover:opacity-100 transition duration-200"></div>
-              <Button
-                size="lg"
-                  className="relative bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[#01294C] font-bold px-10 py-7 text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                asChild
-              >
-                  <Link href="#contato" className="flex items-center gap-2">
+                <Button
+                  size="lg"
+                  className="relative bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[#01294C] font-bold px-4 sm:px-10 py-5 sm:py-7 text-base sm:text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 whitespace-normal sm:whitespace-nowrap"
+                  asChild
+                >
+                  <Link href="#contato" className="flex items-center justify-center gap-2">
                     Solicite seu orçamento agora
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </Link>
-              </Button>
+                </Button>
               </div>
             </motion.div>
             
@@ -1120,13 +1120,13 @@ export default function ClientPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu espaço?</h2>
-              <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu espaço?</h2>
+              <p className="text-lg sm:text-xl text-white mb-8 max-w-2xl mx-auto">
                 Entre em contato agora mesmo e tenha a piscina com deck dos seus sonhos em poucos dias!
               </p>
               <Button
                 size="lg"
-                className="bg-white text-[#01294C] hover:bg-blue-50 font-bold px-8 py-6 text-lg rounded-full"
+                className="bg-white text-[#01294C] hover:bg-blue-50 font-bold px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full whitespace-normal sm:whitespace-nowrap"
                 asChild
               >
                 <Link href="#contato">Solicitar orçamento agora</Link>
