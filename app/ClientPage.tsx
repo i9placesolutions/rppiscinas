@@ -286,7 +286,7 @@ export default function ClientPage() {
       {/* Hero Section */}
       <section className="relative bg-[#01294C] text-white py-16 md:py-24 overflow-hidden">
         {/* Ondas decorativas - posicionada mais abaixo */}
-        <div className="absolute bottom-[-60px] left-0 right-0">
+        <div className="absolute bottom-[-120px] left-0 right-0">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
             <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
           </svg>
@@ -878,7 +878,7 @@ export default function ClientPage() {
                     fill="currentColor"
                             viewBox="0 0 24 24"
                   >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.483v10h-9.983z" />
                   </svg>
                   
                   <blockquote className="text-gray-700 mb-6 italic">"{testimonial.quote}"</blockquote>
