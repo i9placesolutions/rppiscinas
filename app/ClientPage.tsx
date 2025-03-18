@@ -242,9 +242,10 @@ export default function ClientPage() {
               <Image
                 src="/logo.png"
                 alt="RP Piscinas Logo"
-                width={60}
-                height={60}
-                className="w-12 h-12 sm:w-14 sm:h-14"
+                width={120}
+                height={40}
+                className="w-auto h-10 sm:h-12"
+                priority
               />
             </Link>
 
