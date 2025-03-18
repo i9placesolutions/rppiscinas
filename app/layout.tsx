@@ -1,7 +1,6 @@
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import type { Metadata } from "next"
 import "./animations.css"
@@ -12,12 +11,6 @@ export const metadata: Metadata = {
   generator: 'v0.dev',
   title: 'RP Piscinas | Piscinas com Deck de Madeira em Todo o Brasil',
   description: 'Instalação rápida e personalizada de piscinas com deck de madeira em todo o Brasil. Solicite seu orçamento agora e transforme seu espaço com elegância e conforto!',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
 }
 
 export default function RootLayout({
@@ -28,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Instalação rápida e personalizada de piscinas com deck de madeira em todo o Brasil. Solicite seu orçamento agora e transforme seu espaço com elegância e conforto!"
@@ -58,9 +50,9 @@ export default function RootLayout({
         <link rel="preload" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ativo%202-9k7xdDvyE7oktzUM2FxB6Bytg92aEm.png" as="image" />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <div className="min-h-screen">
           {children}
-        </ThemeProvider>
+        </div>
 
         {/* Dados estruturados Schema.org */}
         <Script

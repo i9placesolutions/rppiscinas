@@ -238,15 +238,14 @@ export default function ClientPage() {
       <header className={`sticky top-0 left-0 right-0 z-30 bg-gradient-to-r from-[#01294C] to-[#01294C]/90 text-white transition-all duration-300 ${scrolled ? 'py-2 shadow-lg' : 'py-4 md:py-6'}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center">
               <Image
-                src="/logo.avif"
+                src="/logo.png"
                 alt="RP Piscinas Logo"
-                width={40}
-                height={40}
-                className="w-8 h-8 sm:w-10 sm:h-10"
+                width={60}
+                height={60}
+                className="w-12 h-12 sm:w-14 sm:h-14"
               />
-              <span className="text-lg sm:text-xl font-bold">RP Piscinas</span>
             </Link>
 
             {/* Desktop Navigation */}
