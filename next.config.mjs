@@ -25,11 +25,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  swcMinify: true,
   experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
     optimizeCss: true,
   },
   async headers() {

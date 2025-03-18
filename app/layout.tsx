@@ -58,8 +58,9 @@ export default function RootLayout({
         <Script
           id="schema-business"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        >
+          {`
+            {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "RP Piscinas",
@@ -73,15 +74,16 @@ export default function RootLayout({
               },
               "priceRange": "$$",
               "image": "/piscina1.jpg"
-            })
-          }}
-        />
+            }
+          `}
+        </Script>
 
         <Script
           id="schema-product"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        >
+          {`
+            {
               "@context": "https://schema.org",
               "@type": "Product",
               "name": "Piscina com Deck de Madeira",
@@ -95,7 +97,7 @@ export default function RootLayout({
                 "@type": "Offer",
                 "priceCurrency": "BRL",
                 "price": "0",
-                "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+                "priceValidUntil": "${new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0]}",
                 "availability": "https://schema.org/InStock"
               },
               "aggregateRating": {
@@ -103,9 +105,9 @@ export default function RootLayout({
                 "ratingValue": "5",
                 "reviewCount": "3"
               }
-            })
-          }}
-        />
+            }
+          `}
+        </Script>
       </body>
     </html>
   )
