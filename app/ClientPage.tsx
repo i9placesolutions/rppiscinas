@@ -446,10 +446,6 @@ export default function ClientPage() {
                     </span>
                     <h3 className="text-white text-2xl font-bold mb-3">Design Envernizado</h3>
                     <p className="text-white/90">Acabamento premium com vaso decorativo e deck de madeira envernizada.</p>
-                    <div className="mt-4 flex items-center">
-                      <ChevronRight className="h-5 w-5 text-amber-400" />
-                      <span className="text-amber-400 text-sm font-medium ml-1 group-hover:underline">Ver detalhes</span>
-                    </div>
                   </div>
                 </motion.div>
 
@@ -481,10 +477,6 @@ export default function ClientPage() {
                     </span>
                     <h3 className="text-white text-2xl font-bold mb-3">Cascata Integrada</h3>
                     <p className="text-white/90">Cascata embutida na parede com iluminação natural e design minimalista.</p>
-                    <div className="mt-4 flex items-center">
-                      <ChevronRight className="h-5 w-5 text-amber-400" />
-                      <span className="text-amber-400 text-sm font-medium ml-1 group-hover:underline">Ver detalhes</span>
-                    </div>
                   </div>
                 </motion.div>
 
@@ -516,10 +508,6 @@ export default function ClientPage() {
                     </span>
                     <h3 className="text-white text-2xl font-bold mb-3">Área Externa</h3>
                     <p className="text-white/90">Perfeita para espaços ao ar livre, com deck elevado e escada integrada.</p>
-                    <div className="mt-4 flex items-center">
-                      <ChevronRight className="h-5 w-5 text-amber-400" />
-                      <span className="text-amber-400 text-sm font-medium ml-1 group-hover:underline">Ver detalhes</span>
-                    </div>
                   </div>
                 </motion.div>
               </div>
