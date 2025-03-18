@@ -1,3 +1,4 @@
+/* tailwindcss */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -61,7 +62,7 @@
 @media (min-width: 768px) {
   .md\:py-24 {
     padding-top: 6rem;
-    padding-bottom: 24rem;
+    padding-bottom: 12rem;
   }
 }
 
